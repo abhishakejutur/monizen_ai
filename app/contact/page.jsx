@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
+  AlertCircle,
   ArrowRight,
   Check,
   Clock3,
+  Loader2,
   Mail,
   MapPin,
   Phone,
@@ -24,10 +26,46 @@ const services = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    const formData = new FormData(event.currentTarget);
+    const payload = {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      service: formData.get("service"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(
+          data.error || "Failed to send your enquiry. Please try again."
+        );
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(
+        err.message || "Something went wrong. Please try again later."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -247,12 +285,35 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {error && (
+                  <div
+                    role="alert"
+                    className="flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700 dark:border-red-400/20 dark:bg-red-400/10 dark:text-red-300"
+                  >
+                    <AlertCircle className="mt-0.5 h-5 w-5 shrink-0" />
+                    <div>
+                      <p className="font-bold">Something went wrong</p>
+                      <p className="mt-1 leading-6 opacity-90">{error}</p>
+                    </div>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 px-6 py-4 text-sm font-black text-white shadow-xl shadow-cyan-500/10 transition-all duration-500 hover:-translate-y-1 hover:bg-cyan-600 cursor-pointer"
+                  disabled={loading}
+                  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 px-6 py-4 text-sm font-black text-white shadow-xl shadow-cyan-500/10 transition-all duration-500 hover:-translate-y-1 hover:bg-cyan-600 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:bg-slate-950 cursor-pointer"
                 >
-                  Send enquiry
-                  <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  {loading ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send enquiry
+                      <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </>
+                  )}
                 </button>
               </form>
             ) : (
