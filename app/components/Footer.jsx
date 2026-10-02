@@ -1,10 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  Activity,
   ArrowUpRight,
+  Building2,
+  Cable,
+  Globe2,
+  Headset,
   Mail,
   MapPin,
+  Network,
   Phone,
+  Router,
+  Server,
+  ShieldCheck,
+  Wifi,
 } from "lucide-react";
 
 const navigation = [
@@ -17,12 +27,17 @@ const navigation = [
 ];
 
 const services = [
-  "Broadband Internet",
-  "Internet Leased Line",
-  "Enterprise Connectivity",
-  "Wi-Fi Solutions",
-  "Network Infrastructure",
-  "Managed Connectivity",
+  { name: "Enterprise connectivity", icon: Building2 },
+  { name: "Wi-Fi", icon: Wifi },
+  { name: "Broadband & leased line", icon: Globe2 },
+  { name: "LAN & WAN", icon: Network },
+  { name: "Routers & switches", icon: Router },
+  { name: "Network infrastructure", icon: Server },
+  { name: "Structured cabling", icon: Cable },
+  { name: "Network security", icon: ShieldCheck },
+  { name: "Network monitoring", icon: Activity },
+  { name: "IT infrastructure", icon: Server },
+  { name: "Network support", icon: Headset },
 ];
 
 export default function Footer() {
@@ -53,20 +68,8 @@ export default function Footer() {
             </Link>
 
             <p className="mt-6 max-w-sm text-sm leading-7 text-slate-600 dark:text-slate-400">
-              Premium internet, enterprise connectivity and network solutions
-              designed for a faster connected world.
+              Reliable, secure and scalable network solutions for businesses.
             </p>
-
-            <div className="mt-7 flex flex-wrap gap-2">
-              {["ACT", "TATA", "ISHAN", "JIO"].map((partner) => (
-                <span
-                  key={partner}
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-black tracking-wide text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
-                >
-                  {partner}
-                </span>
-              ))}
-            </div>
           </div>
 
           <div>
@@ -93,13 +96,14 @@ export default function Footer() {
             </h3>
 
             <div className="mt-5 grid gap-3">
-              {services.map((service) => (
+              {services.map(({ name, icon: Icon }) => (
                 <Link
-                  key={service}
+                  key={name}
                   href="/services"
-                  className="w-fit text-sm text-slate-600 transition-colors duration-300 hover:text-cyan-500 dark:text-slate-400 dark:hover:text-cyan-300"
+                  className="flex w-fit items-center gap-2 text-sm text-slate-600 transition-colors duration-300 hover:text-cyan-500 dark:text-slate-400 dark:hover:text-cyan-300"
                 >
-                  {service}
+                  <Icon className="h-3.5 w-3.5 shrink-0" />
+                  {name}
                 </Link>
               ))}
             </div>

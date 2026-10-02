@@ -25,8 +25,8 @@ const metrics = [
     label: "Locations concept",
   },
   {
-    value: "4+",
-    label: "Provider ecosystem",
+    value: "10+",
+    label: "Network service areas",
   },
 ];
 
@@ -56,7 +56,7 @@ const principles = [
   {
     icon: Network,
     title: "Connectivity",
-    text: "Bring providers, infrastructure and requirements into one solution.",
+    text: "Bring connectivity, infrastructure and security together in one solution.",
   },
 ];
 

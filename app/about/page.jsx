@@ -43,20 +43,20 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-[1fr_0.8fr] lg:px-10">
           <div>
             <span className="text-xs font-black uppercase tracking-[0.25em] text-cyan-500">
-              About Monizen AI
+              MONIZEN AI | Network & Connectivity Solutions
             </span>
 
             <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-[-0.05em] text-slate-950 sm:text-6xl md:text-7xl xl:text-8xl dark:text-white">
-              We connect
+              Connecting Businesses.
               <span className="block bg-gradient-to-r from-cyan-500 to-emerald-400 bg-clip-text text-transparent">
-                what matters.
+                Enabling Growth.
               </span>
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">
-              Monizen AI is built around a simple idea: connectivity should make
-              technology more useful, businesses more capable and people more
-              connected.
+              MONIZEN AI is a technology-driven company providing reliable,
+              secure and scalable network and IT connectivity solutions for
+              businesses, startups and enterprises.
             </p>
           </div>
 
@@ -108,22 +108,21 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-base leading-8 text-slate-600 dark:text-slate-400">
             <p>
-              Modern businesses depend on connectivity for almost everything:
-              communication, cloud applications, customer experiences,
-              collaboration and operations.
+              We provide seamless internet connectivity, robust network
+              infrastructure and end-to-end IT networking services that
+              support efficient business operations and digital growth.
             </p>
 
             <p>
-              Monizen AI is designed around that reality. Rather than treating
-              internet connectivity as a commodity alone, we approach it as an
-              important part of the digital infrastructure behind people and
-              businesses.
+              Our services span broadband and Wi-Fi, Internet Leased Lines,
+              LAN and WAN networking, routers and switches, structured cabling,
+              enterprise networking, firewalls and network security, network
+              monitoring, IT infrastructure and network support.
             </p>
 
             <p>
-              Our connectivity ecosystem can include providers such as ACT,
-              TATA, Ishan and Jio, allowing solutions to be considered around
-              different requirements and availability.
+              Our mission is to keep businesses connected through dependable
+              technology, secure networks and professional support.
             </p>
           </div>
         </div>
@@ -211,7 +210,7 @@ export default function AboutPage() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-400">
-            Explore the connectivity ecosystem behind Monizen AI and discover how
+            Explore MONIZEN AI network services and discover how
             we think about network solutions.
           </p>
 

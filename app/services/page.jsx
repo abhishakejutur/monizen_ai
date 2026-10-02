@@ -2,10 +2,14 @@ import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
+  Activity,
   Building2,
+  Cable,
   Globe2,
+  Headset,
   Network,
   Router,
+  Server,
   ShieldCheck,
   Wifi,
   Zap,
@@ -14,50 +18,98 @@ import {
 const services = [
   {
     number: "01",
-    icon: Wifi,
-    title: "Broadband Internet",
+    icon: Building2,
+    title: "Enterprise Network & Connectivity",
     description:
-      "Reliable internet connectivity for homes, teams and everyday high-bandwidth experiences.",
+      "Secure, scalable network solutions designed around business operations and digital growth.",
     gradient: "from-cyan-400/20 to-sky-500/5",
   },
   {
     number: "02",
-    icon: Globe2,
-    title: "Internet Leased Line",
+    icon: Wifi,
+    title: "Wi-Fi Solutions",
     description:
-      "Dedicated connectivity designed for organizations that need business-focused internet access.",
+      "Business Wi-Fi planned for dependable coverage, performance and straightforward management.",
     gradient: "from-sky-400/20 to-blue-500/5",
   },
   {
     number: "03",
-    icon: Network,
-    title: "Enterprise Connectivity",
+    icon: Globe2,
+    title: "Broadband & Internet Leased Line",
     description:
-      "Flexible connectivity architecture for offices, distributed teams and growing enterprises.",
+      "Reliable broadband and dedicated leased-line connectivity for everyday and business-critical needs.",
     gradient: "from-emerald-400/20 to-cyan-500/5",
   },
   {
     number: "04",
-    icon: Router,
-    title: "Wi-Fi Solutions",
+    icon: Network,
+    title: "LAN & WAN Networking",
     description:
-      "Professional Wi-Fi concepts designed around coverage, performance and user experience.",
+      "Connected local and wide-area networks that link teams, offices and essential systems.",
     gradient: "from-cyan-400/20 to-emerald-500/5",
   },
   {
     number: "05",
-    icon: Building2,
-    title: "Network Infrastructure",
+    icon: Router,
+    title: "Routers & Switches",
     description:
-      "Structured connectivity and infrastructure solutions that help create dependable digital environments.",
+      "Routing and switching equipment configured to support stable, efficient business networks.",
     gradient: "from-blue-400/20 to-cyan-500/5",
   },
   {
     number: "06",
-    icon: ShieldCheck,
-    title: "Managed Connectivity",
+    icon: Building2,
+    title: "Network Infrastructure",
     description:
-      "A managed approach to connectivity that keeps infrastructure easier to monitor and evolve.",
+      "End-to-end infrastructure planning and deployment for dependable digital environments.",
+    gradient: "from-cyan-400/20 to-sky-500/5",
+  },
+  {
+    number: "07",
+    icon: Cable,
+    title: "Structured Cabling",
+    description:
+      "Organized, standards-led cabling that provides a solid foundation for network connectivity.",
+    gradient: "from-emerald-400/20 to-green-500/5",
+  },
+  {
+    number: "08",
+    icon: Network,
+    title: "Enterprise Networking",
+    description:
+      "Secure, scalable network environments tailored to the needs of growing and established organizations.",
+    gradient: "from-sky-400/20 to-blue-500/5",
+  },
+  {
+    number: "09",
+    icon: ShieldCheck,
+    title: "Firewalls & Network Security",
+    description:
+      "Firewall deployment and practical network security measures to help protect business systems.",
+    gradient: "from-blue-400/20 to-cyan-500/5",
+  },
+  {
+    number: "10",
+    icon: Activity,
+    title: "Network Monitoring",
+    description:
+      "Proactive visibility into network health helps teams identify issues and maintain continuity.",
+    gradient: "from-cyan-400/20 to-emerald-500/5",
+  },
+  {
+    number: "11",
+    icon: Server,
+    title: "IT Infrastructure",
+    description:
+      "Connected IT infrastructure managed to support reliable, secure and scalable business operations.",
+    gradient: "from-sky-400/20 to-blue-500/5",
+  },
+  {
+    number: "12",
+    icon: Headset,
+    title: "Network Support",
+    description:
+      "Professional support for network deployment, troubleshooting and ongoing infrastructure needs.",
     gradient: "from-emerald-400/20 to-green-500/5",
   },
 ];
@@ -104,9 +156,8 @@ export default function ServicesPage() {
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">
-              From everyday broadband to enterprise connectivity, Monizen AI
-              brings together practical network solutions for different digital
-              requirements.
+              MONIZEN AI delivers reliable, secure and scalable network and IT
+              connectivity solutions for businesses, startups and enterprises.
             </p>
           </div>
         </div>

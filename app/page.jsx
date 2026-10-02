@@ -1,11 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
+  Activity,
   ArrowRight,
   ArrowUpRight,
+  Building2,
+  Cable,
   Globe2,
   Network,
   Router,
+  Server,
   ShieldCheck,
   Sparkles,
   Wifi,
@@ -43,6 +47,20 @@ const services = [
   },
 ];
 
+const networkServices = [
+  { title: "Enterprise connectivity", icon: Building2 },
+  { title: "Wi-Fi", icon: Wifi },
+  { title: "Broadband & ILL", icon: Globe2 },
+  { title: "LAN & WAN", icon: Network },
+  { title: "Routers & switches", icon: Router },
+  { title: "Network infrastructure", icon: Server },
+  { title: "Structured cabling", icon: Cable },
+  { title: "Enterprise networking", icon: Building2 },
+  { title: "Firewalls & security", icon: ShieldCheck },
+  { title: "Network monitoring", icon: Activity },
+  { title: "IT infrastructure", icon: Server },
+];
+
 const reasons = [
   {
     icon: ShieldCheck,
@@ -52,9 +70,9 @@ const reasons = [
   },
   {
     icon: Network,
-    title: "Strategic Ecosystem",
+    title: "Network Expertise",
     description:
-      "A broader connectivity ecosystem helps us design solutions around different requirements.",
+      "Integrated networking services are shaped around each business and its requirements.",
   },
   {
     icon: Sparkles,
@@ -108,20 +126,21 @@ function NetworkSphere() {
       </div>
 
       {[
-        ["ACT", "left-[3%] top-[22%]", "cyan"],
-        ["TATA", "right-[2%] top-[25%]", "cyan"],
-        ["ISHAN", "left-[7%] bottom-[20%]", "emerald"],
-        ["JIO", "right-[6%] bottom-[18%]", "cyan"],
-      ].map(([name, position, color], index) => (
+        { name: "Wi-Fi", icon: Wifi, position: "left-[3%] top-[22%]", color: "cyan" },
+        { name: "Fiber / ILL", icon: Globe2, position: "right-[2%] top-[25%]", color: "cyan" },
+        { name: "LAN / WAN", icon: Network, position: "left-[7%] bottom-[20%]", color: "emerald" },
+        { name: "Network security", icon: ShieldCheck, position: "right-[6%] bottom-[18%]", color: "cyan" },
+      ].map(({ name, icon: Icon, position, color }, index) => (
         <div
           key={name}
-          className={`absolute ${position} z-30 animate-bounce rounded-2xl border border-white/10 bg-slate-950/85 px-4 py-3 shadow-2xl backdrop-blur-xl [animation-duration:${
+          className={`absolute ${position} z-30 animate-bounce rounded-2xl border border-white/10 bg-slate-950/85 px-3 py-3 shadow-2xl backdrop-blur-xl [animation-duration:${
             4 + index * 2
           }s] dark:bg-slate-900/85`}
         >
-          <span className="text-xs font-black tracking-wide text-white">
+          <div className="flex items-center gap-2 text-xs font-black tracking-wide text-white">
+            <Icon className="h-3.5 w-3.5 shrink-0 text-cyan-300" />
             {name}
-          </span>
+          </div>
 
           <div className="mt-1 flex items-center gap-1.5 text-[9px] text-slate-400">
             <span
@@ -129,7 +148,7 @@ function NetworkSphere() {
                 color === "emerald" ? "bg-emerald-400" : "bg-cyan-400"
               }`}
             />
-            PROVIDER
+            NETWORK SERVICE
           </div>
         </div>
       ))}
@@ -170,8 +189,8 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-8 max-w-xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8 dark:text-slate-400">
-              Powerful broadband, enterprise connectivity and intelligent
-              network solutions designed for a faster connected world.
+              Reliable Wi-Fi, broadband, leased lines and end-to-end network
+              infrastructure for businesses, startups and enterprises.
             </p>
 
             <div className="relative z-10 mt-9 flex flex-col gap-3 sm:flex-row">
@@ -208,18 +227,19 @@ export default function HomePage() {
       </section>
 
       <section className="border-y border-slate-200 bg-slate-50 py-8 dark:border-white/10 dark:bg-slate-900/40">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-5 sm:px-8 md:flex-row lg:px-10">
-          <p className="text-center text-xs font-black uppercase tracking-[0.2em] text-slate-400 md:text-left">
-            Connectivity ecosystem
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <p className="mb-5 text-center text-xs font-black uppercase tracking-[0.2em] text-slate-400">
+            Network & connectivity services
           </p>
 
-          <div className="grid w-full max-w-2xl grid-cols-4 divide-x divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white dark:divide-white/10 dark:border-white/10 dark:bg-white/[0.03]">
-            {["ACT", "TATA", "ISHAN", "JIO"].map((partner) => (
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+            {networkServices.map(({ title, icon: Icon }) => (
               <div
-                key={partner}
-                className="flex h-16 items-center justify-center text-xs font-black tracking-[0.12em] text-slate-600 transition-colors duration-300 hover:text-cyan-500 dark:text-slate-300 dark:hover:text-cyan-300 sm:text-sm"
+                key={title}
+                className="flex min-h-14 items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-xs font-bold text-slate-700 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300"
               >
-                {partner}
+                <Icon className="h-4 w-4 shrink-0 text-cyan-600 dark:text-cyan-300" />
+                {title}
               </div>
             ))}
           </div>
@@ -345,8 +365,8 @@ export default function HomePage() {
             </h2>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-400">
-              Build connectivity around your requirements with a flexible
-              ecosystem of providers, infrastructure and service options.
+              Build secure, scalable connectivity around your requirements
+              with end-to-end network infrastructure and IT support.
             </p>
 
             <Link
@@ -371,7 +391,8 @@ export default function HomePage() {
 
             {[
               {
-                name: "ACT",
+                name: "Wi-Fi",
+                icon: Wifi,
                 dot: "bg-cyan-400",
                 glow: "shadow-[0_0_14px_rgba(34,211,238,0.9)]",
                 chip: "left-1/2 top-[9%] -translate-x-1/2 -translate-y-1/2",
@@ -379,7 +400,8 @@ export default function HomePage() {
                 mid: "left-1/2 top-[30%] -translate-x-1/2",
               },
               {
-                name: "TATA",
+                name: "LAN / WAN",
+                icon: Network,
                 dot: "bg-sky-400",
                 glow: "shadow-[0_0_14px_rgba(56,189,248,0.9)]",
                 chip: "right-[9%] top-1/2 translate-x-1/2 -translate-y-1/2",
@@ -387,7 +409,8 @@ export default function HomePage() {
                 mid: "right-[30%] top-1/2 -translate-y-1/2",
               },
               {
-                name: "ISHAN",
+                name: "Fiber / ILL",
+                icon: Globe2,
                 dot: "bg-emerald-400",
                 glow: "shadow-[0_0_14px_rgba(52,211,153,0.9)]",
                 chip: "left-1/2 bottom-[9%] -translate-x-1/2 translate-y-1/2",
@@ -395,30 +418,29 @@ export default function HomePage() {
                 mid: "left-1/2 bottom-[30%] -translate-x-1/2",
               },
               {
-                name: "JIO",
+                name: "Firewall",
+                icon: ShieldCheck,
                 dot: "bg-cyan-400",
                 glow: "shadow-[0_0_14px_rgba(34,211,238,0.9)]",
                 chip: "left-[9%] top-1/2 -translate-x-1/2 -translate-y-1/2",
                 line: "left-[9%] top-1/2 h-px w-[41%] -translate-y-1/2 bg-gradient-to-r from-cyan-400 via-cyan-400/50 to-transparent",
                 mid: "left-[30%] top-1/2 -translate-y-1/2",
               },
-            ].map((provider) => (
-              <div key={provider.name}>
-                <div className={`absolute ${provider.line}`} />
+            ].map((capability) => (
+              <div key={capability.name}>
+                <div className={`absolute ${capability.line}`} />
 
                 <div
-                  className={`absolute ${provider.chip} z-30 flex h-12 w-12 flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-xl dark:border-white/10 dark:bg-slate-900 sm:h-16 sm:w-16`}
+                  className={`absolute ${capability.chip} z-30 flex h-12 w-12 flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-xl dark:border-white/10 dark:bg-slate-900 sm:h-16 sm:w-16`}
                 >
-                  <span className="text-[10px] font-black tracking-wide text-slate-700 dark:text-white sm:text-xs">
-                    {provider.name}
-                  </span>
+                  <capability.icon className="h-5 w-5 text-cyan-600 dark:text-cyan-300 sm:h-6 sm:w-6" />
                   <span
-                    className={`mt-1 h-1.5 w-1.5 animate-pulse rounded-full sm:h-2 sm:w-2 ${provider.dot}`}
+                    className={`mt-1 h-1.5 w-1.5 animate-pulse rounded-full sm:h-2 sm:w-2 ${capability.dot}`}
                   />
                 </div>
 
                 <div
-                  className={`absolute ${provider.mid} h-2 w-2 animate-pulse rounded-full sm:h-2.5 sm:w-2.5 ${provider.dot} ${provider.glow}`}
+                  className={`absolute ${capability.mid} h-2 w-2 animate-pulse rounded-full sm:h-2.5 sm:w-2.5 ${capability.dot} ${capability.glow}`}
                 />
               </div>
             ))}
@@ -437,7 +459,7 @@ export default function HomePage() {
               ["99.9%", "Uptime concept"],
               ["24/7", "Support concept"],
               ["100+", "Locations concept"],
-              ["4+", "Connectivity ecosystem"],
+              ["10+", "Network services"],
             ].map(([value, label]) => (
               <div
                 key={label}

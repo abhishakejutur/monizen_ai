@@ -1,51 +1,52 @@
 import Link from "next/link";
 import {
+  Activity,
   ArrowRight,
   ArrowUpRight,
   CheckCircle2,
   Globe2,
+  Headset,
   Network,
-  Radio,
   ShieldCheck,
   Sparkles,
   Wifi,
 } from "lucide-react";
 
-const providers = [
+const networkCapabilities = [
   {
-    name: "ACT",
+    name: "Wi-Fi",
+    icon: Wifi,
     position: "left-[2%] top-[18%] sm:left-[8%]",
-    color: "cyan",
   },
   {
-    name: "TATA",
+    name: "Fiber / ILL",
+    icon: Globe2,
     position: "right-[2%] top-[18%] sm:right-[8%]",
-    color: "blue",
   },
   {
-    name: "ISHAN",
+    name: "LAN / WAN",
+    icon: Network,
     position: "left-[2%] bottom-[18%] sm:left-[8%]",
-    color: "emerald",
   },
   {
-    name: "JIO",
+    name: "Network security",
+    icon: ShieldCheck,
     position: "right-[2%] bottom-[18%] sm:right-[8%]",
-    color: "cyan",
   },
 ];
 
 const benefits = [
   {
     icon: Network,
-    title: "Multiple Providers",
+    title: "End-to-End Networking",
     description:
-      "A broader ecosystem can help create connectivity options around specific requirements.",
+      "LAN, WAN and enterprise network design tailored to your business requirements.",
   },
   {
-    icon: Radio,
-    title: "Scalable",
+    icon: Activity,
+    title: "Network Monitoring",
     description:
-      "Solutions can be shaped around changing users, locations and bandwidth requirements.",
+      "Network visibility helps teams track performance and respond to issues sooner.",
   },
   {
     icon: ShieldCheck,
@@ -55,9 +56,9 @@ const benefits = [
   },
   {
     icon: Sparkles,
-    title: "Supported",
+    title: "Professional Support",
     description:
-      "A human-focused approach keeps communication and service coordination simple.",
+      "Practical support for deployment, troubleshooting and ongoing IT infrastructure needs.",
   },
 ];
 
@@ -82,29 +83,21 @@ function NetworkMap() {
         </span>
       </div>
 
-      {providers.map((provider, index) => (
+      {networkCapabilities.map(({ name, icon: Icon, position }) => (
         <div
-          key={provider.name}
-          className={`absolute ${provider.position} z-30`}
+          key={name}
+          className={`absolute ${position} z-30`}
         >
           <div className="animate-bounce rounded-2xl border border-white/10 bg-slate-900/90 px-4 py-3 shadow-2xl backdrop-blur-xl [animation-duration:5s] sm:px-5 sm:py-4">
             <div className="flex items-center gap-2.5">
-              <span
-                className={`h-2 w-2 animate-pulse rounded-full ${
-                  provider.color === "emerald"
-                    ? "bg-emerald-400"
-                    : provider.color === "blue"
-                      ? "bg-sky-400"
-                      : "bg-cyan-400"
-                }`}
-              />
+              <Icon className="h-4 w-4 text-cyan-300" />
               <span className="text-xs font-black text-white sm:text-sm">
-                {provider.name}
+                {name}
               </span>
             </div>
 
             <p className="mt-1 text-[8px] uppercase tracking-[0.2em] text-slate-500">
-              Ecosystem
+              Network service
             </p>
           </div>
         </div>
@@ -142,25 +135,21 @@ export default function NetworkPage() {
 
         <div className="relative mx-auto max-w-7xl px-5 text-center sm:px-8 lg:px-10">
           <span className="text-xs font-black uppercase tracking-[0.25em] text-cyan-500">
-            Network ecosystem
+            Network & connectivity solutions
           </span>
 
           <h1 className="mx-auto mt-5 max-w-5xl text-center text-4xl font-black leading-[1.05] tracking-[-0.05em] text-slate-950 sm:text-6xl md:text-7xl xl:text-8xl dark:text-white">
-            Connected through
+            Enterprise networks
             <span className="block bg-gradient-to-r from-cyan-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent">
-              strong relationships.
+              built for business.
             </span>
           </h1>
 
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">
-            Monizen AI can work with a connectivity ecosystem that includes
-            providers such as ACT, TATA, Ishan and Jio.
-          </p>
-
-          <p className="mx-auto mt-4 max-w-2xl text-xs leading-6 text-slate-400">
-            Provider names are shown as part of the connectivity ecosystem and
-            do not represent official partnership certifications unless
-            separately confirmed.
+            MONIZEN AI provides reliable Wi-Fi, Internet Leased Lines, fiber
+            connections and IT infrastructure for businesses and IT companies.
+            We build secure, scalable, high-performance network environments
+            through professional deployment and support.
           </p>
         </div>
       </section>
@@ -214,10 +203,10 @@ export default function NetworkPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="grid gap-5 md:grid-cols-2">
             {[
-              "Provider ecosystem",
-              "Flexible connectivity design",
-              "Scalable infrastructure",
-              "Business-focused support",
+              "LAN / WAN deployment",
+              "Structured cabling",
+              "Firewalls & network security",
+              "Network monitoring & IT support",
             ].map((item) => (
               <div
                 key={item}
