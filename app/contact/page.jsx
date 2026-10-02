@@ -189,7 +189,12 @@ export default function ContactPage() {
 
           <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 dark:border-white/10 dark:bg-white/[0.03] sm:p-9">
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                method="post"
+                action="/api/sendEmail"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <label
