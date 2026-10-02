@@ -131,10 +131,16 @@ export default function Footer() {
                 +91 75697 36515
               </a>
 
-              <div className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Hyderabad%2C%20Telangana%2C%20India"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Hyderabad, Telangana, India in Google Maps"
+                className="flex items-start gap-3 text-sm text-slate-600 transition-colors hover:text-cyan-500 dark:text-slate-400 dark:hover:text-cyan-300"
+              >
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
                 Hyderabad, Telangana, India
-              </div>
+              </a>
             </div>
 
             <Link

@@ -173,9 +173,15 @@ export default function ContactPage() {
                   <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
                     Location
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-slate-200">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Hyderabad%2C%20Telangana%2C%20India"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Hyderabad, Telangana, India in Google Maps"
+                    className="mt-1 block text-sm font-semibold text-slate-200 transition-colors hover:text-cyan-300"
+                  >
                     Hyderabad, Telangana, India
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
