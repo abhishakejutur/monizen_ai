@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SocialLinks from "./SocialLinks";
 import {
   Activity,
   ArrowUpRight,
@@ -70,6 +71,7 @@ export default function Footer() {
             <p className="mt-6 max-w-sm text-sm leading-7 text-slate-600 dark:text-slate-400">
               Reliable, secure and scalable network solutions for businesses.
             </p>
+            <SocialLinks className="mt-5 flex" />
           </div>
 
           <div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import SocialLinks from "@/app/components/SocialLinks";
 import {
   AlertCircle,
   ArrowRight,
@@ -114,7 +115,7 @@ export default function ContactPage() {
                 href="mailto:hello@monizen.example"
                 className="group flex gap-4"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-cyan-300">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
                   <Mail className="h-4 w-4" />
                 </span>
 
@@ -132,7 +133,7 @@ export default function ContactPage() {
                 href="tel:+917569736515"
                 className="group flex gap-4"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-cyan-300">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
                   <Phone className="h-4 w-4" />
                 </span>
 
@@ -147,7 +148,7 @@ export default function ContactPage() {
               </a>
 
               <div className="flex gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-cyan-300">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
                   <Clock3 className="h-4 w-4" />
                 </span>
 
@@ -165,7 +166,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-cyan-300">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
                   <MapPin className="h-4 w-4" />
                 </span>
 
@@ -185,6 +186,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+            <SocialLinks className="mt-8 flex" inverse />
           </div>
 
           <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 dark:border-white/10 dark:bg-white/[0.03] sm:p-9">
@@ -339,7 +341,7 @@ export default function ContactPage() {
 
                 <Link
                   href="/"
-                  className="mt-8 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-3.5 text-sm font-bold text-white transition-colors duration-300 hover:bg-cyan-600"
+                  className="mt-8 inline-flex items-center gap-2 rounded-xl bg-cyan-700 px-6 py-3.5 text-sm font-bold !text-white transition-colors duration-300 hover:bg-cyan-800"
                 >
                   Back to home
                   <ArrowRight className="h-4 w-4" />
