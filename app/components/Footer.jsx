@@ -120,20 +120,20 @@ export default function Footer() {
                 className="flex items-start gap-3 text-sm text-slate-600 hover:text-cyan-500 dark:text-slate-400 dark:hover:text-cyan-300"
               >
                 <Mail className="mt-0.5 h-4 w-4 shrink-0" />
-                hello@monizen.example
+                monizenai@gmail.com
               </a>
 
               <a
-                href="tel:+910000000000"
+                href="tel:+917569736515"
                 className="flex items-start gap-3 text-sm text-slate-600 hover:text-cyan-500 dark:text-slate-400 dark:hover:text-cyan-300"
               >
                 <Phone className="mt-0.5 h-4 w-4 shrink-0" />
-                +91 00000 00000
+                +91 75697 36515
               </a>
 
               <div className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
-                India
+                Hyderabad, Telangana, India
               </div>
             </div>
 

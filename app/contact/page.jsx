@@ -123,13 +123,13 @@ export default function ContactPage() {
                     Email
                   </p>
                   <p className="mt-1 text-sm font-semibold text-slate-200 group-hover:text-cyan-300">
-                    hello@monizen.example
+                    monizenai@gmail.com
                   </p>
                 </div>
               </a>
 
               <a
-                href="tel:+910000000000"
+                href="tel:+917569736515"
                 className="group flex gap-4"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-cyan-300">
@@ -141,7 +141,7 @@ export default function ContactPage() {
                     Phone
                   </p>
                   <p className="mt-1 text-sm font-semibold text-slate-200 group-hover:text-cyan-300">
-                    +91 00000 00000
+                    +91 75697 36515
                   </p>
                 </div>
               </a>
@@ -174,7 +174,7 @@ export default function ContactPage() {
                     Location
                   </p>
                   <p className="mt-1 text-sm font-semibold text-slate-200">
-                    India
+                    Hyderabad, Telangana, India
                   </p>
                 </div>
               </div>
