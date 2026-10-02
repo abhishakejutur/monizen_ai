@@ -18,8 +18,29 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Monizen AI | Internet that moves",
-  description:
-    "Premium broadband, Internet Leased Line, Wi-Fi and enterprise connectivity solutions designed for a faster connected world.",
+  description: "MONIZEN AI delivers reliable, secure, and scalable enterprise network solutions, corporate Wi-Fi, Internet leased lines, structured cabling, and IT infrastructure management for businesses.",
+  keywords: [
+    "Monizen AI", "Monizen AI services",
+    "Enterprise Network Solutions", "Internet Leased Line", "LAN WAN Networking", 
+    "Structured Cabling Services", "Firewalls & Network Security", "IT Infrastructure Management",
+    "Unified Communications", "Carrier-Based Cloud Interconnect", "Internet Exchange",
+    "home wifi setup", "company wifi network", "office internet connection", "office wifi installation",
+    "fast internet for business", "shop internet setup", "startup wifi network",
+    "best internet provider for office", "net connection for business",
+    "Broadband", "ILL", "Fibernet", "Act fiber alternative", "TATA leased line alternative", 
+    "Reliance Jio Business Internet alternative", "Jio leased line alternative", "High-Speed Broadband"
+  ],
+  authors: [
+    { name: "Monizen AI" },
+    { name: "Ramya" },
+    { name: "Abhishake Jutur" }
+  ],
+  openGraph: {
+    title: "Enterprise Connectivity & IT Solutions | Monizen AI",
+    description: "Secure, scalable network and IT infrastructure planning designed for everyday and business-critical operations.",
+    url: "https://monizen-ai.vercel.app",
+    type: "website",
+  }
 };
 
 export default function RootLayout({ children }) {
