@@ -56,7 +56,7 @@ export default async function handler(req, res) {
   const adminMail = {
     from: `"${ORG.name}" <${smtpUser}>`,
     // to: ORG.email,
-    to: `"${ORG.name}" <abhishakejutur@gmail.com>`,
+    to: `"${ORG.name}" <monizenai@gmail.com>`,
     subject: `${ORG.name} — New enquiry from ${name}`,
     html: `
       <div style="font-family: Arial, sans-serif; background: #f9fafb; padding: 20px;">
