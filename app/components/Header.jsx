@@ -31,7 +31,7 @@ export default function Header() {
             >
               <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl sm:h-10 sm:w-10">
                 <Image
-                  src="/logo.png"
+                  src="/M_Logo-C.png"
                   alt="Monizen AI logo"
                   width={180}
                   height={180}

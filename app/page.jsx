@@ -106,7 +106,7 @@ function NetworkSphere() {
           {/* <Wifi className="h-5 w-5" /> */}
           <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl sm:h-12 sm:w-12">
             <Image
-              src="/logo.png"
+              src="/M_Logo-C.png"
               alt="Monizen AI logo"
               width={180}
               height={180}

@@ -51,7 +51,7 @@ export default function Footer() {
             <Link href="/" className="flex w-fit items-center gap-2.5">
               <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl">
                 <Image
-                  src="/logo.png"
+                  src="/M_Logo-C.png"
                   alt="Monizen AI logo"
                   width={80}
                   height={80}
