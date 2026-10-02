@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 
 const LOGO_URL =
-  'https://raw.githubusercontent.com/abhishakejutur/monizen_ai/refs/heads/main/public/logo.png';
+  'https://raw.githubusercontent.com/abhishakejutur/monizen_ai/refs/heads/main/public/M_logo_Monizen-C.png';
 
 const ORG = {
   name: 'Monizen AI',
