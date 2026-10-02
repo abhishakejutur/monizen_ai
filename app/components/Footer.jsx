@@ -71,7 +71,7 @@ export default function Footer() {
             <p className="mt-6 max-w-sm text-sm leading-7 text-slate-600 dark:text-slate-400">
               Reliable, secure and scalable network solutions for businesses.
             </p>
-            <SocialLinks className="mt-5 flex" />
+            <SocialLinks className="mt-5 hidden lg:flex" />
           </div>
 
           <div>
@@ -152,6 +152,7 @@ export default function Footer() {
               Start a conversation
               <ArrowUpRight className="h-4 w-4" />
             </Link>
+            <SocialLinks className="mt-5 flex lg:hidden" />
           </div>
         </div>
 
